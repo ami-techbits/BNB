@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNB Learning Center</title>
+    <link href="images/AMI BNB.jpg" rel="icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script defer src="script.js"></script>
+
+    
+<!-- Styles for the page -->
+<style>
+    section {
+        padding: 60px 10%;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        color: #dbae19;
+        margin-bottom: 20px;
+    }
+
+    .strategy-hero {
+        background: url('images/bnb%20panorama%202.jpg') no-repeat center center/cover;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .strategy-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .strategy-hero .hero-text {
+        position: relative;
+        z-index: 1;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease-out;
+    }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .pillars-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .pillar-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pillar-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .pillar-card h3 {
+        margin: 0;
+        color: #dbae19;
+    }
+
+    .pillar-detail {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        display: none;
+        text-align: left;
+        animation: fadeInExpand 0.4s ease;
+    }
+
+    @keyframes fadeInExpand {
+        from {
+            opacity: 0;
+            transform: scaleY(0);
+        }
+        to {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    .timeline-list {
+        list-style: none;
+        padding: 0;
+        font-size: 1.1rem;
+        text-align: left;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .timeline-list li {
+        margin-bottom: 10px;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/AMI BNB.jpg" alt="BNB Logo" class="logo">
+            <span class="site-title">BNB Learning Center</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="student-life.html">Student Life</a></li>
+            <li><a href="strategy.html">BNB Strategy 2034</a></li>
+            <li><a href="news.html">News & Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="right-section">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <a href="login-page.html" class="login-btn">Login</a>
+            <button class="menu-toggle">&#9776;</button>
+        </div>
+    </nav>
+<!-- Spinner Start -->
+<div id="spinner">
+    <img src="images/AMI BNB.jpg" alt="Loading..." class="rotate">
+</div>
+ 
+
+
+
+
+
+
+
+
+
+<section class="strategy-hero">
+    <div class="hero-text">
+        <h1>BNB Strategy 2034</h1>
+        <p>Shaping the Future of Education — Empowering Future Leaders, One Student at a Time.</p>
+    </div>
+</section>
+
+<section class="strategy-overview fade-in">
+    <h2 class="section-title">Our 10-Year Vision</h2>
+    <p>BNB Learning Center’s Strategy 2034 outlines a bold and innovative roadmap to redefine education, focusing on academic excellence, digital transformation, student well-being, and global citizenship.</p>
+</section>
+
+<section class="strategy-pillars fade-in">
+    <h2 class="section-title">Strategic Pillars</h2>
+    <div class="pillars-container">
+
+        <!-- Pillar 1 -->
+        <div class="pillar-card" onclick="togglePillar('qualityEducation')">
+            <h3>High-Quality Education</h3>
+        </div>
+        <div class="pillar-detail" id="qualityEducation">
+            <p>BNB will enhance its curriculum, promote a reading culture, expand digital learning, and continuously develop teachers to ensure world-class academic excellence.</p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="pillar-card" onclick="togglePillar('happySchool')">
+            <h3>Happy & Inclusive School</h3>
+        </div>
+        <div class="pillar-detail" id="happySchool">
+            <p>We prioritize student happiness, mental health, and inclusivity, ensuring every child feels safe, valued, and inspired to excel.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card" onclick="togglePillar('digitalLearning')">
+            <h3>Digital Transformation</h3>
+        </div>
+        <div class="pillar-detail" id="digitalLearning">
+            <p>BNB classrooms will become interactive digital hubs where technology enhances collaboration, critical thinking, and creativity.</p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="pillar-card" onclick="togglePillar('communityPartnerships')">
+            <h3>Community & Global Partnerships</h3>
+        </div>
+        <div class="pillar-detail" id="communityPartnerships">
+            <p>BNB will strengthen its ties with local businesses and international institutions, fostering global exposure and real-world learning for students.</p>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="pillar-card" onclick="togglePillar('financialSustainability')">
+            <h3>Financial Sustainability</h3>
+        </div>
+        <div class="pillar-detail" id="financialSustainability">
+            <p>Through diversified income streams like training, consultancy, and facility rental, BNB will secure its financial future while expanding access to scholarships.</p>
+        </div>
+
+    </div>
+</section>
+
+<style></style>
+<section class="container py-5">
+    <div class="card shadow-sm p-4 fade-in">
+        <h2 class="section-title text-center text-success">Key Milestones (2024-2034)</h2>
+        <ul class="timeline-list list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>2024-2026:</strong> Digital classrooms launch, teacher training programs begin.
+            </li>
+            <li class="list-group-item">
+                <strong>2027-2029:</strong> Infrastructure expansion, global student exchange programs.
+            </li>
+            <li class="list-group-item">
+                <strong>2030-2034:</strong> Full implementation of holistic excellence model, BNB as a model school in Ethiopia.
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section: Contact Info -->
+        <div class="footer-section contact">
+            <h3>BNB Learning Center</h3>
+            <p><strong>Address:</strong> 123 BNB Street, City, Country</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> contact@bnblearning.com</p>
+        </div>
+
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-life.html">Student Life</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section: Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 BNB Learning Center. All Rights Reserved.</p>
+    </div>
+</footer>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+        // Hide spinner and show content after page loads
+        window.onload = function () {
+            document.getElementById("spinner").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        };
+    </script>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle")
+        const navLinks = document.querySelector(".nav-links")
+    
+        menuToggle.addEventListener("click", () => {
+            navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex"
+        })
+    })
+    </script>
+
+<!-- JS for animations and expand-collapse -->
+<script>
+    document.addEventListener("scroll", () => {
+        document.querySelectorAll('.fade-in').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                section.classList.add('show');
+            }
+        });
+    });
+
+    function togglePillar(id) {
+        const detail = document.getElementById(id);
+        const allDetails = document.querySelectorAll('.pillar-detail');
+        allDetails.forEach(d => {
+            if (d !== detail) d.style.display = 'none';
+        });
+        detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+        detail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
+
+
+</body>
+</html>

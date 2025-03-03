@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNB Learning Center</title>
+    <link href="images/AMI BNB.jpg" rel="icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script defer src="script.js"></script>
+    
+<!-- Add animations via CSS -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        padding: 60px 10%;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        color: #dbae19;
+        margin-bottom: 20px;
+    }
+
+    .admissions-hero {
+        background: url('images/bnb%20panorama%203.jpg') no-repeat center center/cover;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .admissions-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .admissions-hero .hero-text {
+        position: relative;
+        z-index: 1;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.8s ease-out;
+    }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .steps-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .step-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .step-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .step-card h3 {
+        color: #dbae19;
+        margin-bottom: 10px;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        color: #000;
+        padding: 12px 25px;
+        border: none;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        margin-top: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/AMI BNB.jpg" alt="BNB Logo" class="logo">
+            <span class="site-title">BNB Learning Center</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="student-life.html">Student Life</a></li>
+            <li><a href="strategy.html">BNB Strategy 2034</a></li>
+            <li><a href="news.html">News & Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="right-section">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <a href="login-page.html" class="login-btn">Login</a>
+            <button class="menu-toggle">&#9776;</button>
+        </div>
+    </nav>
+<!-- Spinner Start -->
+<div id="spinner">
+    <img src="images/AMI BNB.jpg" alt="Loading..." class="rotate">
+</div>
+ 
+
+
+
+
+
+
+
+<section class="admissions-hero">
+    <div class="hero-text">
+        <h1>Welcome to BNB Admissions</h1>
+        <p>Your journey to excellence starts here. Explore how you can become part of the BNB Learning Center family.</p>
+    </div>
+</section>
+
+<section class="admission-overview fade-in">
+    <h2 class="section-title">Why Choose BNB?</h2>
+    <p>At BNB Learning Center, we are committed to providing world-class education that nurtures academic excellence, creativity, and personal growth. Our admissions process is designed to welcome students who are eager to excel and contribute to a brighter future.</p>
+</section>
+
+<section class="admission-steps fade-in">
+    <h2 class="section-title">Admission Process</h2>
+    <div class="steps-container">
+        <div class="step-card">
+            <h3>1. Inquiry</h3>
+            <p>Explore our website and visit our campus to learn more about BNB’s programs, values, and facilities.</p>
+        </div>
+        <div class="step-card">
+            <h3>2. Application</h3>
+            <p>Complete the online application form or visit our Admissions Office to submit your application in person.</p>
+        </div>
+        <div class="step-card">
+            <h3>3. Entrance Assessment</h3>
+            <p>Applicants undergo age-appropriate entrance assessments to evaluate academic preparedness and potential.</p>
+        </div>
+        <div class="step-card">
+            <h3>4. Interview</h3>
+            <p>Our admissions team conducts interviews with students and parents to understand their goals and expectations.</p>
+        </div>
+        <div class="step-card">
+            <h3>5. Admission Decision</h3>
+            <p>Successful applicants receive an official offer letter, outlining enrollment details and next steps.</p>
+        </div>
+    </div>
+</section>
+
+<section class="scholarships fade-in">
+    <h2 class="section-title">Scholarships & Financial Aid</h2>
+    <p>We believe that every student deserves access to quality education. Our scholarship programs recognize academic excellence, leadership potential, and financial need. Learn more about the financial assistance options available for eligible families.</p>
+</section>
+
+<section class="download-forms fade-in">
+    <h2 class="section-title">Download Admission Forms</h2>
+    <p>Ready to get started? Download our latest admission forms, requirements checklist, and tuition fee structure.</p>
+    <a href="files/admission-forms.pdf" class="btn btn-warning">Download Now</a>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section: Contact Info -->
+        <div class="footer-section contact">
+            <h3>BNB Learning Center</h3>
+            <p><strong>Address:</strong> 123 BNB Street, City, Country</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> contact@bnblearning.com</p>
+        </div>
+
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-life.html">Student Life</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section: Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 BNB Learning Center. All Rights Reserved.</p>
+    </div>
+</footer>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- Add animations script -->
+<script>
+    document.addEventListener("scroll", () => {
+        const fadeIns = document.querySelectorAll('.fade-in');
+        fadeIns.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                section.classList.add('show');
+            }
+        });
+    });
+</script>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+        // Hide spinner and show content after page loads
+        window.onload = function () {
+            document.getElementById("spinner").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        };
+    </script>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle")
+        const navLinks = document.querySelector(".nav-links")
+    
+        menuToggle.addEventListener("click", () => {
+            navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex"
+        })
+    })
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>B N B Learning Center</title>
+    <link href="images/AMI BNB.jpg" rel="icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script defer src="script.js"></script>
+    <style>/* Section fade-in effect (used globally) */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Welcome Message Pop-Out */
+        .welcome-pop {
+            opacity: 0;
+            transform: scale(0.7);
+            transition: all 0.7s ease-out;
+        }
+        .welcome-pop.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Explore Section Zoom-In */
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.8s ease-out;
+        }
+        .zoom-in.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Number Counter Animation */
+        .count-up {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+       
+    /* Custom Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    .contact-info {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .map {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input, .contact-form textarea {
+      margin-bottom: 15px;
+    }
+
+    .contact-form button {
+      width: 100%;
+    }
+  </style>
+
+
+</head>
+  <body>
+
+    <!-- Navbar (preserved from your existing setup) -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/AMI BNB.jpg" alt="BNB Logo" class="logo">
+            <span class="site-title">BNB Learning Center</span>
+            <a ></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="student-life.html">Student Life</a></li>
+            <li><a href="strategy.html">BNB Strategy 2034</a></li>
+            <li><a href="news.html">News & Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <div class="right-section">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <a href="login-page.html" class="login-btn">Login</a>
+            <button class="menu-toggle">&#9776;</button>
+        </div>
+    </nav>
+
+    <!-- Spinner Start -->
+    <div id="spinner">
+        <img src="images/AMI BNB.jpg" alt="Loading..." class="rotate">
+    </div>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/kg/kg panorama.jpg" class="d-block w-100" style="height: 400px;" alt="BNB Panorama 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/bnb panorama 2.jpg" class="d-block w-100"style="height: 400px;" alt="BNB Panorama 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/bnb panorama 3.jpg" class="d-block w-100" style="height: 400px;" alt="BNB Panorama 3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/bnb panorama 4.jpg" class="d-block w-100" style="height: 400px;" alt="BNB Panorama 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="container py-5 text-center zoom-in">
+        <h2 class="fw-bold text-success">Welcome to BNB Learning Center</h2>
+        <p class="lead">Celebrating 25 years of excellence in education, nurturing responsible global citizens with knowledge, creativity, and leadership.</p>
+    </div>
+    
+    
+
+    <!-- Quick Links Grid -->
+    <div class="container py-5 zoom-in">
+        <h3 class="text-center mb-4">Explore BNB</h3>
+        <div class="row text-center g-4">
+            <div class="col-md-4"><a href="about.html" class="btn btn-outline-success w-100 py-3">About Us</a></div>
+            <div class="col-md-4"><a href="academics.html" class="btn btn-outline-success w-100 py-3">Academics</a></div>
+            <div class="col-md-4"><a href="admissions.html" class="btn btn-outline-success w-100 py-3">Admissions</a></div>
+            <div class="col-md-4"><a href="student-life.html" class="btn btn-outline-success w-100 py-3">Student Life</a></div>
+            <div class="col-md-4"><a href="strategy.html" class="btn btn-outline-success w-100 py-3">BNB Strategy 2034</a></div>
+            <div class="col-md-4"><a href="contact.html" class="btn btn-outline-success w-100 py-3">Contact Us</a></div>
+        </div>
+    </div>
+    
+
+    <div class="container py-5 text-center key-stats fade-in">
+        <h3 class="mb-4">BNB at a Glance</h3>
+        <div class="row g-4">
+            <div class="col-6 col-md-3"><div class="p-4 border rounded"><h4 class="count-up" data-target="2250">0</h4><p>Students Enrolled</p></div></div>
+            <div class="col-6 col-md-3"><div class="p-4 border rounded"><h4 class="count-up" data-target="78 %">0</h4><p>University Entrance Pass Rate</p></div></div>
+            <div class="col-6 col-md-3"><div class="p-4 border rounded"><h4 class="count-up" data-target="25">0</h4><p>Years of Excellence</p></div></div>
+            <div class="col-6 col-md-3"><div class="p-4 border rounded"><h4 class="count-up" data-target="100">0</h4><p>Qualified Teachers</p></div></div>
+        </div>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="container py-5">
+        <h3 class="text-center mb-4">Explore Our Campus</h3>
+        <div id="photoGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img src="images/bnb1.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 1" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="images/bnb2.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 2" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img src="images/bnb3.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 3" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="images/bnb4.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 4" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img src="images/bnb5.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 5" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="images/bnb6.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 6" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img src="images/kg/kg1.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 3" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="images/kg/kg5.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 4" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img src="images/bnb5.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 5" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="images/bnb6.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 6" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <img src="images/bnb panorama 2.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 7" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img src="images/bnb panorama 4.jpg" class="img-fluid rounded shadow-sm" alt="Gallery 8" style="height: 500px; width: 700px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#photoGalleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#photoGalleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <style>
+        .carousel-item {
+            transition: transform 0.5s ease-in-out;
+        }
+    </style>
+    
+    <div class="container py-5">
+        <h3 class="text-center mb-4 text-success">Explore More at BNB</h3>
+        <p class="text-center mb-4">Discover how BNB Learning Center extends its impact beyond the classroom through community initiatives, alumni engagement, and strong local partnerships.</p>
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <a href="collab.html" class="btn btn-outline-success w-100 py-3">
+                    Collaboration with Local Businesses
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="alumni.html" class="btn btn-outline-success w-100 py-3">
+                    Alumni Network
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="community.html" class="btn btn-outline-success w-100 py-3">
+                    Community & Partnerships
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Contact Page Content -->
+<div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row g-4">
+      <!-- Contact Info and Form -->
+      <div class="col-md-6">
+        <div class="contact-info">
+          <h4>BNB Learning Center Hawassa</h4>
+          <p><strong>Address:</strong> BNB Learning Center, Hawassa, Ethiopia</p>
+          <p><strong>Phone:</strong> +251-912-345-678</p>
+          <p><strong>Email:</strong> contact@bnbhawassa.edu.et</p>
+        </div>
+        
+        <div class="contact-form mt-4">
+          <h5>Send Us a Message</h5>
+          <form action="#" method="post">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" required>
+            <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Map Section -->
+      <div class="col-md-6">
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.397355951732!2d38.484935799999995!3d7.079847300000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17b15aaa7abc2089%3A0xb6b0a038c485bd3b!2sBNB%20Learning%20Centre!5e0!3m2!1sen!2set!4v1731748106208!5m2!1sen!2set" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Section: Contact Info -->
+            <div class="footer-section contact">
+                <h3>BNB Learning Center</h3>
+                <p><strong>Address:</strong> 123 BNB Street, City, Country</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Email:</strong> contact@bnblearning.com</p>
+            </div>
+
+            <!-- Middle Section: Quick Links -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="student-life.html">Student Life</a></li>
+                    <li><a href="news.html">News & Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Section: Social Media -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 BNB Learning Center. All Rights Reserved.</p>
+        </div>
+    </footer>
+</div>
+     
+ <script>
+    // Hide spinner and show content after page loads
+    window.onload = function () {
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("content").style.display = "block";
+    };
+</script>
+<script>
+    // Observe sections and apply animations when they scroll into view
+const observerOptions = { threshold: 0.3 };
+
+const fadeElements = document.querySelectorAll('.fade-in');
+const zoomElements = document.querySelectorAll('.zoom-in');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, observerOptions);
+
+fadeElements.forEach(el => observer.observe(el));
+zoomElements.forEach(el => observer.observe(el));
+
+// Number Counter Animation (for BNB at a Glance)
+function animateCount(element, start, end, duration) {
+    let current = start;
+    const increment = (end - start) / (duration / 20);
+
+    function updateCount() {
+        current += increment;
+        element.innerText = Math.floor(current);
+        if (current < end) {
+            requestAnimationFrame(updateCount);
+        } else {
+            element.innerText = end;
+        }
+    }
+
+    updateCount();
+}
+
+window.addEventListener('scroll', () => {
+    const statsSection = document.querySelector('.key-stats');
+    if (statsSection.getBoundingClientRect().top < window.innerHeight && !statsSection.classList.contains('counted')) {
+        statsSection.classList.add('counted');
+        document.querySelectorAll('.count-up').forEach(el => {
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            animateCount(el, 0, target, 2000);
+        });
+    }
+});
+
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

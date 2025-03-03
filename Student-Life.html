@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNB Learning Center</title>
+    <link href="images/AMI BNB.jpg" rel="icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script defer src="css/styles.css"></script>
+    <!-- Add animations and expand functionality via CSS & JS -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        padding: 60px 10%;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        color: #dbae19;
+        margin-bottom: 20px;
+    }
+
+    .student-life-hero {
+        background: url('images/bnb%20panorama%204.jpg') no-repeat center center/cover;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .student-life-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .student-life-hero .hero-text {
+        position: relative;
+        z-index: 1;
+        animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease-out;
+    }
+
+    .fade-in.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .life-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .life-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .life-card h3 {
+        margin: 0;
+        color: #dbae19;
+    }
+
+    .life-detail {
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        display: none;
+        text-align: left;
+        animation: fadeInExpand 0.4s ease;
+    }
+
+    @keyframes fadeInExpand {
+        from {
+            opacity: 0;
+            transform: scaleY(0);
+        }
+        to {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/AMI BNB.jpg" alt="BNB Logo" class="logo">
+            <span class="site-title">BNB Learning Center</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="student-life.html">Student Life</a></li>
+            <li><a href="strategy.html">BNB Strategy 2034</a></li>
+            <li><a href="news.html">News & Events</a></li>
+           
+        </ul>
+
+        <div class="right-section">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <a href="login-page.html" class="login-btn">Login</a>
+            <button class="menu-toggle">&#9776;</button>
+        </div>
+    </nav>
+<!-- Spinner Start -->
+<div id="spinner">
+    <img src="images/AMI BNB.jpg" alt="Loading..." class="rotate">
+</div>
+ 
+
+
+
+
+
+
+<section class="student-life-hero">
+    <div class="hero-text">
+        <h1>Explore Student Life at BNB</h1>
+        <p>More than academics — BNB is where friendships grow, talents shine, and future leaders emerge.</p>
+    </div>
+</section>
+
+<section class="student-life-overview fade-in">
+    <h2 class="section-title">A Vibrant Campus Experience</h2>
+    <p>At BNB Learning Center, student life is an exciting journey filled with opportunities to explore, create, lead, and contribute. Our happy school culture blends learning, creativity, and global citizenship.</p>
+</section>
+
+<section class="student-life-cards fade-in">
+    <h2 class="section-title">Discover Student Life</h2>
+    <div class="cards-container">
+
+        <!-- Card 1 - Happy Community -->
+        <div class="life-card" onclick="toggleCard('community')">
+            <h3>A Happy School Community</h3>
+        </div>
+        <div class="life-detail" id="community">
+            <p>At BNB, happiness is a core value. Our events, celebrations, and mentorship programs create a warm, inclusive environment where every student feels valued and supported.</p>
+        </div>
+
+        <!-- Card 2 - Clubs -->
+        <div class="life-card" onclick="toggleCard('clubs')">
+            <h3>Clubs & Organizations</h3>
+        </div>
+        <div class="life-detail" id="clubs">
+            <p>From Science Club to Debate Club, and from Music to Eco Clubs, BNB offers diverse platforms for students to explore their interests, lead projects, and build lasting friendships.</p>
+        </div>
+
+        <!-- Card 3 - Sports -->
+        <div class="life-card" onclick="toggleCard('sports')">
+            <h3>Sports & Competitions</h3>
+        </div>
+        <div class="life-detail" id="sports">
+            <p>With competitive sports teams, annual sports day, and regional tournaments, students develop teamwork, discipline, and healthy competition at BNB.</p>
+        </div>
+
+        <!-- Card 4 - Community Engagement -->
+        <div class="life-card" onclick="toggleCard('communityService')">
+            <h3>Community Engagement</h3>
+        </div>
+        <div class="life-detail" id="communityService">
+            <p>BNB students actively engage in social projects, environmental campaigns, and charity initiatives — building compassion and leadership in real-world contexts.</p>
+        </div>
+
+        <!-- Card 5 - Counseling -->
+        <div class="life-card" onclick="toggleCard('counseling')">
+            <h3>Counseling & Student Support</h3>
+        </div>
+        <div class="life-detail" id="counseling">
+            <p>Our professional counselors guide students in academic, emotional, and career paths, while peer mentorship programs create a strong support network.</p>
+        </div>
+
+        <!-- Card 6 - Global Citizenship -->
+        <div class="life-card" onclick="toggleCard('global')">
+            <h3>Global Citizenship & Cultural Exchange</h3>
+        </div>
+        <div class="life-detail" id="global">
+            <p>Through exchange programs, global partnerships, and cross-cultural events, BNB students develop a global mindset while respecting their local heritage.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Section: Contact Info -->
+        <div class="footer-section contact">
+            <h3>BNB Learning Center</h3>
+            <p><strong>Address:</strong> 123 BNB Street, City, Country</p>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> contact@bnblearning.com</p>
+        </div>
+
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-life.html">Student Life</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Section: Social Media -->
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="footer-bottom">
+        <p>&copy; 2025 BNB Learning Center. All Rights Reserved.</p>
+    </div>
+</footer>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<script>
+    // Fade-in effect
+    document.addEventListener("scroll", () => {
+        document.querySelectorAll('.fade-in').forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                section.classList.add('show');
+            }
+        });
+    });
+
+    // Expand/collapse cards
+    function toggleCard(id) {
+        const detail = document.getElementById(id);
+        const allDetails = document.querySelectorAll('.life-detail');
+        allDetails.forEach(d => {
+            if (d !== detail) {
+                d.style.display = 'none';
+            }
+        });
+        detail.style.display = (detail.style.display === 'block') ? 'none' : 'block';
+        detail.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+</script>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <script>
+        // Hide spinner and show content after page loads
+        window.onload = function () {
+            document.getElementById("spinner").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        };
+    </script>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle")
+        const navLinks = document.querySelector(".nav-links")
+    
+        menuToggle.addEventListener("click", () => {
+            navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex"
+        })
+    })
+    </script>
+
+
+
+</body>
+</html>
